@@ -1,0 +1,252 @@
+<!-- Complete multi-page static website (HTML + Tailwind CDN)
+Files included below. Save each section into separate files with the given filenames.
+Instructions:
+1. Create a project folder, e.g. `project-site/`.
+2. Inside it create `index.html`, `vendors.html`, `suppliers.html`, `consultants.html`, `construction.html`, `transport.html`, `lifecycle.html`, `contact.html`, and a folder `assets/` for images (placeholders provided).
+3. Open `index.html` in browser or serve via a simple static server (Live Server / `python -m http.server`).
+
+This layout replicates the L&T-style top navigation with dropdown, hero, image grids and lifecycle flow. Replace placeholder text with your actual company details.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANI MVPF</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-grey-100">
+  <!-- Navbar -->
+
+  <nav class="bg-blue-900 text-white p-4 flex justify-between items-center">
+    <div class="text-xl font-bold">Your Company</div>
+    <ul class="flex space-x-6">
+      <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="vendors.html" class="hover:text-yellow-300">Vendors</a></li>
+      <li><a href="suppliers.html" class="hover:text-yellow-300">Suppliers</a></li>
+      <li><a href="consultants.html" class="hover:text-yellow-300">Consultants</a></li>
+      <li><a href="construction.html" class="hover:text-yellow-300">Construction</a></li>
+      <li><a href="transport.html" class="hover:text-yellow-300">Transport</a></li>
+      <li><a href="lifecycle.html" class="hover:text-yellow-300">Lifecycle</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300">Contact</a></li>
+      <li><a href="login.html" class="hover:text-yellow-300">Login</a></li>
+    </ul>
+  </nav>
+        </div>
+      </a>
+
+      <nav class="relative">
+        <ul class="flex items-center gap-6 text-sm">
+          <li class="group relative">
+            
+            <!-- Mega dropdown -->
+            <div class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white border rounded-lg p-4 nav-drop w-[900px]">
+              <div class="grid mega-grid gap-4">
+                <div>
+                  <h4 class="font-semibold mb-2">Infrastructure</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li><a href="construction.html" class="hover:text-indigo-600">Construction</a></li>
+                    <li><a href="transport.html" class="hover:text-indigo-600">Transport</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Power Transmission</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Water & Effluent</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2">Projects</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li><a href="#" class="hover:text-indigo-600">Renewables</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Ports & Marine</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Railways</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Metros</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2">Solutions</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li><a href="vendors.html" class="hover:text-indigo-600">Vendors & Suppliers</a></li>
+                    <li><a href="consultants.html" class="hover:text-indigo-600">Consultants</a></li>
+                    <li><a href="lifecycle.html" class="hover:text-indigo-600">Lifecycle Services</a></li>
+                    <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+            
+          
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-yellow-600 text-white">
+    <div class="absolute inset-0 opacity-20 bg-[url('assets/hero-bg.jpg')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-6 py-28 flex items-center gap-10">
+      <div class="lg:w-1/2">
+        <h2 class="text-4xl font-extrabold leading-tight">End-to-end collaboration across the full project lifecycle</h2>
+        <p class="mt-4 text-lg text-indigo-100">Registration → Tendering → Award → Execution → Billing → AMC → Help Desk → Analytics</p>
+        <div class="mt-6 flex gap-3">
+          <a href="ecosystem.html" class="bg-white text-indigo-600 px-5 py-3 rounded-md font-semibold">Explore ecosystem</a>
+          <a href="lifecycle.html" class="border border-white px-5 py-3 rounded-md">See lifecycle flow</a>
+        </div>
+      </div>
+      <div class="hidden lg:block lg:w-1/2">
+        <div class="bg-white/10 p-6 rounded-2xl card-shadow">
+          <img src="assets/hero-card.jpg" alt="hero" class="w-full h-56 object-cover rounded-md" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Grid -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold">Featured Projects</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="assets/project1.jpg" alt="proj1" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">PROJECT CAPTION</h4>
+            <p class="text-sm text-gray-600 mt-2">Brief description of the project and role.</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="assets/project2.jpg" alt="proj2" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">PROJECT CAPTION</h4>
+            <p class="text-sm text-gray-600 mt-2">Brief description of the project and role.</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-lg overflow-hidden card-shadow">
+          <img src="assets/project3.jpg" alt="proj3" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold">PROJECT CAPTION(name)</h4>
+            <p class="text-sm text-gray-600 mt-2">Brief description of the project and role.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick ecosystem -->
+  <section class="py-10 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg card-shadow">
+          <h4 class="font-semibold">Vendors</h4>
+          <p class="text-sm text-gray-600 mt-1">Onboarding, qualification & performance.</p>
+          <a href="vendors.html" class="text-indigo-600 mt-2 inline-block">Details →</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg card-shadow">
+          <h4 class="font-semibold">Suppliers</h4>
+          <p class="text-sm text-gray-600 mt-1">Procurement & logistics.</p>
+          <a href="suppliers.html" class="text-indigo-600 mt-2 inline-block">Details →</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg card-shadow">
+          <h4 class="font-semibold">Consultants</h4>
+          <p class="text-sm text-gray-600 mt-1">Design & audits.</p>
+          <a href="consultants.html" class="text-indigo-600 mt-2 inline-block">Details →</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg card-shadow">
+          <h4 class="font-semibold">Construction</h4>
+          <p class="text-sm text-gray-600 mt-1">Execution & site coordination.</p>
+          <a href="construction.html" class="text-indigo-600 mt-2 inline-block">Details →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifecycle small -->
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-xl font-semibold">Lifecycle Collaboration Flow</h3>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Registration</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Tendering</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Award</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Execution</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Billing</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">AMC</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Help Desk</span>
+        <span class="px-4 py-2 bg-indigo-50 rounded-full">Analytics</span>
+      </div>
+      <div class="mt-4"><a href="lifecycle.html" class="text-indigo-600">View detailed lifecycle →</a></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t mt-12 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
+      <div>
+        <h4 class="font-semibold">ANI MEPF & ELV</h4>
+        <p class="text-sm text-gray-600 mt-2">Collaborate across the full project lifecycle with trusted partners.</p>
+      </div>
+      <div class="text-sm text-gray-600">
+        <div>Contact: +91 90000 00000</div>
+        <div>Email: info@....company.com</div>
+        <div class="mt-2"><a href="contact.html" class="text-indigo-600">Contact us</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white p-6 text-center">
+    <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+<!-- Placeholders: Add these images into assets/ folder:
+ - hero-bg.jpg (large banner background)
+ - hero-card.jpg (card image on hero)
+ - project1.jpg, project2.jpg, project3.jpg
+ - favicon or logo if you have
+-->
